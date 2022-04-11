@@ -1,0 +1,168 @@
+$helper_name: wd;
+.#{$helper_name}{
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  &--auto{
+    max-width:100%;
+    @include media-max-width('large'){
+      max-width:#{width('medium')}px;
+    }
+    @include media-min-width('medium'){
+      max-width:#{width('small')}px;
+    }
+  }
+  &--max{
+    max-width:#{width('max')}px;
+    @include media-max-width('large'){
+      max-width:#{width('medium')}px;
+    }
+    @include media-min-width('medium'){
+      max-width:#{width('small')}px;
+    }
+  }
+  &--large{
+    max-width:#{width('large')}px;
+    @include media-max-width('large'){
+      max-width:#{width('medium')}px;
+    }
+    @include media-min-width('medium'){
+      max-width:#{width('small')}px;
+    }
+  }
+  &--medium{
+    max-width:#{width('medium')}px;
+    @include media-min-width('medium'){
+      max-width:#{width('small')}px;
+    }
+  }
+  &--small{
+    max-width:#{width('small')}px;
+  }
+  &--x-small{
+    max-width:#{width('x-small')}px;
+  }
+  &--tiny{
+    max-width:#{width('tiny')}px;
+  }
+  &--min{
+    max-width:#{width('min')}px;
+  }
+
+  // @include media-max-width('small'){
+  //   max-width:#{width('tiny')}px;
+  // }
+  // @include media-max-width('tiny'){
+  //   max-width:#{width('min')}px;
+  // }
+}
+
+$helper_name: al;
+.#{$helper_name}{
+  &--top-left{
+    text-align:left;
+    justify-content:flex-start;
+    align-self:flex-start;
+    margin-right:auto;
+  }
+  &--top-center{
+    text-align:center;
+    justify-content:center;
+    align-self:flex-start;
+    margin:auto;
+  }
+  &--top-right{
+    text-align:right;
+    justify-content:center;
+    align-self:flex-start;
+    margin-left:auto;
+  }
+  &--center-left{
+    text-align:left;
+    justify-content:flex-start;
+    align-self:center;
+    margin-right:auto;
+  }
+  &--center-center{
+    text-align:center;
+    justify-content:center;
+    align-self:center;
+    margin:auto;
+  }
+  &--center-right{
+    text-align:right;
+    justify-content:center;
+    align-self:center;
+    margin-left:auto;
+  }
+  &--bottom-left{
+    text-align:left;
+    justify-content:flex-start;
+    align-self:flex-end;
+    margin-right:auto;
+  }
+  &--bottom-center{
+    text-align:center;
+    justify-content:center;
+    align-self:flex-end;
+    margin:auto;
+  }
+  &--bottom-right{
+    text-align:right;
+    justify-content:center;
+    align-self:flex-end;
+    margin-left:auto;
+  }
+}
+
+
+$helper_name: mobile-al;
+.#{$helper_name}{
+  @include media-max-width('small'){
+    &--top-left{
+      text-align:left;
+      justify-content:flex-start;
+      align-self:flex-start;
+    }
+    &--top-center{
+      text-align:center;
+      justify-content:center;
+      align-self:flex-start;
+    }
+    &--top-right{
+      text-align:right;
+      justify-content:center;
+      align-self:flex-start;
+    }
+    &--center-left{
+      text-align:left;
+      justify-content:flex-start;
+      align-self:center;
+    }
+    &--center-center{
+      text-align:center;
+      justify-content:center;
+      align-self:center;
+    }
+    &--center-right{
+      text-align:right;
+      justify-content:center;
+      align-self:center;
+    }
+    &--bottom-left{
+      text-align:left;
+      justify-content:flex-start;
+      align-self:flex-end;
+    }
+    &--bottom-center{
+      text-align:center;
+      justify-content:center;
+      align-self:flex-end;
+    }
+    &--bottom-right{
+      text-align:right;
+      justify-content:center;
+      align-self:flex-end;
+    }
+  }
+}

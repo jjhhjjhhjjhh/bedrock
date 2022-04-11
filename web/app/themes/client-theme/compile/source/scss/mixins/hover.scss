@@ -1,0 +1,14 @@
+@mixin hover($class: & ) {
+  @if $class != &{
+    #{$class}{
+        &:hover,&:active,&:focus,&:focus-within {
+            @content;
+        }
+    }
+  }
+  @else{
+      &:hover,&:active,&:focus,&:focus-within {
+          @content;
+      }
+  }
+}

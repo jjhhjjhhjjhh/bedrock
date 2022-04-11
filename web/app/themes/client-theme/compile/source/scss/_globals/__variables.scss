@@ -1,0 +1,70 @@
+//Grayscale
+$black: #000;
+$tar: #151515;
+$charcoal: #313131;
+$gray: #999999;
+$grey: $gray;
+$concrete: #d0d0d0;
+$ghost: #f0f0f0;
+$white: #fff;
+
+// Colors
+$red: #df1f23;
+$primary-color: $red;
+$action-color: $primary-color;
+
+// Fonts
+$Arial: sans-serif;
+$base-font: $Arial;
+$heading-font: $Roboto;
+$default-text-color: $charcoal;
+
+// Components
+$box-shadow: 0 5px 23px -5px rgba($black,0.2);
+
+// Widths
+$w-scrollbar : 17;
+$widths: (
+  min: 483,
+  tiny: 483,
+  x-small: 640,
+  small: 944,
+  medium: 1100,
+  large: 1440,
+  x-large: 1920,
+  max: 1920
+);
+
+// Break Points
+@function width($width-name) {
+    $width: map-get($widths, $width-name);
+    @return '#{$width}';
+}
+
+// -- Maximums --
+@function max-width-for($width-name) {
+    $width: map-get($widths, $width-name);
+    @return '(max-width: #{$width + $w-scrollbar}px)';
+}
+
+@mixin media-max-width($max-breakpoint-name) {
+    @media #{max-width-for($max-breakpoint-name)} {
+        @content;
+    }
+}
+
+// -- Minimums --
+@function min-width-for($width-name) {
+    $width: map-get($widths, $width-name);
+    @return '(min-width:  #{$width + $w_scrollbar + 1}px)';
+}
+
+@mixin media-min-width($min-breakpoint-name) {
+    @media #{min-width-for($min-breakpoint-name)} {
+        @content;
+    }
+}
+
+// -- Mobile Menu Switch --
+$mobile-on: #{width('small')}px;
+$mobile-off: #{width('small')+1}px;

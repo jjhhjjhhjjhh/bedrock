@@ -1,0 +1,7 @@
+// https://stackoverflow.com/a/17181946
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content;}
+    &:-moz-placeholder           {@content;}
+    &::-moz-placeholder          {@content;}
+    &:-ms-input-placeholder      {@content;} 
+}

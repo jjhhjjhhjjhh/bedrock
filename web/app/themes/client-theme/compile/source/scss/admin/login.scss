@@ -1,0 +1,100 @@
+$_page: login;
+
+.#{$_page}{
+  background:none;
+  padding:40px;
+  #login{
+    width:100%;
+    max-width:450px;
+    padding:8% 0;
+  }
+
+  .message{
+    background:$ghost !important;
+  }
+  .success, .register{
+    border-color: $primary-color;
+  }
+
+  form{
+    border:none;
+    padding:0;
+    overflow:unset;
+    input{
+      &:hover{
+        border: solid 1px $primary-color;
+        box-shadow: 0 0 0 1px $primary-color;
+      }
+      &:focus,&:focus-within,&:active{
+        border: solid 1px $primary-color;
+        box-shadow: none;
+        box-shadow: 0 0 0 3px $primary-color;
+      }
+    }
+    .forgetmenot{
+      float:none;
+      padding-bottom:10px;
+    }
+
+    .acf-field-text .acf-input-wrap{overflow:unset;}
+    .acf-field-number{
+      .acf-input{
+        margin-top:4px;
+        border-radius: 4px;
+        &:hover{
+          box-shadow: 0 0 0 1px $primary-color;
+        }
+        &:focus,&:focus-within,&:active{
+          box-shadow: 0 0 0 3px $primary-color;
+        }
+      }
+    }
+    p.submit{
+      height:32px;
+    }
+  }
+
+  .button{
+    background: $primary-color;
+    border-radius: 3em;
+    border: none;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing:0.1em;
+
+    @include hover(){
+      background:$primary-color;
+      border: none;
+      box-shadow: 0 0 0 2px $charcoal;
+    }
+  }
+
+  #nav{
+    text-align:center;
+    padding: 10px 0;
+    margin:0;
+  }
+
+  #backtoblog{
+    padding:0;
+    margin:0;
+    a{
+      padding: .5em 0;
+      // background: $secondary-color;
+      color: $white;
+      border: solid 2px $charcoal;
+      border-radius: 3em;
+      display:block;
+      text-align: center;
+      font-weight:bold;
+      letter-spacing:0.05em;
+      @include hover(){
+        color: $white;
+        box-shadow: 0 0 0 3px $primary-color;
+      }
+
+    }
+  }
+}

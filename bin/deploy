@@ -1,0 +1,5 @@
+npm install
+npm update
+./bin/composer install
+./bin/composer update
+./bin/gulp compileScript compileStyle compileAdminStyle

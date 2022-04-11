@@ -1,0 +1,19 @@
+@mixin icon($__icon_content){
+    content: $__icon_content;
+    font: 900 normal normal 14px/1 "Font Awesome 5 Free";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin brand_icon($__icon_content){
+    content: $__icon_content;
+    font: 400 normal normal 14px/1 "Font Awesome 5 Brand";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
